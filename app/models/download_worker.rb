@@ -19,7 +19,7 @@ class DownloadWorker
   def try_download
     @enc.update_status("Downloading")
     begin
-      binding.pry
+      # binding.pry
       download_enclosure!
       @enc.update_status("Waiting to Upload")
     rescue Errno::ENOENT => e
